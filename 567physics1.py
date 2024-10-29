@@ -85,3 +85,6 @@ axs[2].legend()
 
 plt.tight_layout()
 plt.show()
+
+
+## pyinstaller --onefile 567physics1.py
