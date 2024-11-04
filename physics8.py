@@ -19,7 +19,6 @@ t = np.arange(0, t_max, dt)
 def f(x, v):
   return v, -(k * x + b * v) / m
 
-# Метод Рунге-Кутты четвертого порядка
 def rk4(f, x0, v0, t):
   x = np.zeros_like(t)
   v = np.zeros_like(t)
@@ -34,7 +33,6 @@ def rk4(f, x0, v0, t):
     v[i + 1] = v[i] + dt / 6 * (k1v + 2 * k2v + 2 * k3v + k4v)
   return x, v
 
-# Решение дифференциального уравнения
 x, v = rk4(f, x0, v0, t)
 
 # Расчет энергии
